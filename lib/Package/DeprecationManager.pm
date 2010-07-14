@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
 BEGIN {
-  $Package::DeprecationManager::VERSION = '0.03';
+  $Package::DeprecationManager::VERSION = '0.04';
 }
 
 use strict;
@@ -99,8 +99,6 @@ sub _build_warn {
                 && defined $deprecated_at
                 && $compat_version lt $deprecated_at;
 
-        return if $warned{$package}{ $args{feature} };
-
         my $msg;
         if ( defined $args{message} ) {
             $msg = $args{message};
@@ -111,7 +109,9 @@ sub _build_warn {
                 if defined $deprecated_at;
         }
 
-        $warned{$package}{ $args{feature} } = 1;
+        return if $warned{$package}{ $args{feature} }{$msg};
+
+        $warned{$package}{ $args{feature} }{$msg} = 1;
 
         local $Carp::CarpLevel = $Carp::CarpLevel + 1 + $skipped;
 
@@ -133,7 +133,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -217,8 +217,10 @@ to the feature name passed in the C<-deprecations> hash.
 If you don't explicitly specify a feature, the C<deprecated()> sub uses
 C<caller()> to identify its caller, using its fully qualified subroutine name.
 
-Deprecation warnings are only issued once for a given package, regardless of
-how many times the deprecated sub/method is called.
+A given deprecation warning is only issued once for a given package. This
+module tracks this based on both the feature name I<and> the error message
+itself. This means that if you provide severaldifferent error messages for the
+same feature, all of those errors will appear.
 
 =head1 BUGS
 

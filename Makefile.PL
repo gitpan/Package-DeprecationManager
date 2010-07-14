@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     'Params::Util' => '0',
     'Sub::Install' => '0'
   },
-  'VERSION' => '0.03',
+  'VERSION' => '0.04',
   'test' => {
     'TESTS' => 't/*.t'
   }
