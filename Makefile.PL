@@ -13,7 +13,8 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'Dave Rolsky <autarch@urth.org>',
   'BUILD_REQUIRES' => {
     'Test::Exception' => '0',
-    'Test::More' => '0.88'
+    'Test::More' => '0.88',
+    'Test::Requires' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -28,7 +29,7 @@ my %WriteMakefileArgs = (
     'Params::Util' => '0',
     'Sub::Install' => '0'
   },
-  'VERSION' => '0.07',
+  'VERSION' => '0.08',
   'test' => {
     'TESTS' => 't/*.t'
   }
