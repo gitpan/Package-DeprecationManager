@@ -24,10 +24,11 @@ my %WriteMakefileArgs = (
   'NAME' => 'Package::DeprecationManager',
   'PREREQ_PM' => {
     'Carp' => '0',
+    'List::MoreUtils' => '0',
     'Params::Util' => '0',
     'Sub::Install' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t'
   }

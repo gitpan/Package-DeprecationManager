@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
 BEGIN {
-  $Package::DeprecationManager::VERSION = '0.06';
+  $Package::DeprecationManager::VERSION = '0.07';
 }
 
 use strict;
@@ -78,7 +78,7 @@ sub _build_warn {
 
         my $skipped = 1;
 
-        if ( keys %ignore ) {
+        if ( @ignore_res || keys %ignore ) {
             while ( defined $package
                 && ( $ignore{$package} || any { $package =~ $_ } @ignore_res )
                 ) {
@@ -137,7 +137,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 

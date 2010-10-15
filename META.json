@@ -22,6 +22,7 @@
       "runtime" : {
          "requires" : {
             "Carp" : 0,
+            "List::MoreUtils" : 0,
             "Params::Util" : 0,
             "Sub::Install" : 0
          }
@@ -45,6 +46,6 @@
          "web" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/Package-DeprecationManager.git;a=summary"
       }
    },
-   "version" : "0.06"
+   "version" : "0.07"
 }
 
