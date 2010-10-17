@@ -10,6 +10,7 @@ SIGNATURE
 dist.ini
 lib/Package/DeprecationManager.pm
 t/basic.t
+t/compile.t
 t/release-eol.t
 t/release-kwalitee.t
 t/release-no-tabs.t

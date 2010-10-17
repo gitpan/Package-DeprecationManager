@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
 BEGIN {
-  $Package::DeprecationManager::VERSION = '0.08';
+  $Package::DeprecationManager::VERSION = '0.09';
 }
 
 use strict;
@@ -137,7 +137,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -208,8 +208,8 @@ The C<import()> sub allows callers of I<your> class to specify an C<-api_version
 parameter. If this is supplied, then deprecation warnings are only issued for
 deprecations for api versions earlier than the one specified.
 
-You must call C<deprecated()> sub in each deprecated subroutine. When called,
-it will issue a warning using C<Carp::cluck()>.
+You must call the C<deprecated()> sub in each deprecated subroutine. When
+called, it will issue a warning using C<Carp::cluck()>.
 
 The C<deprecated()> sub can be called in several ways. If you do not pass any
 arguments, it will generate an appropriate warning message. If you pass a
