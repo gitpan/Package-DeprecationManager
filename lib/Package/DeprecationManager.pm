@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
 BEGIN {
-  $Package::DeprecationManager::VERSION = '0.09';
+  $Package::DeprecationManager::VERSION = '0.10';
 }
 
 use strict;
@@ -137,7 +137,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 

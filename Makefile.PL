@@ -12,7 +12,7 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'Manage deprecation warnings for your distribution',
   'AUTHOR' => 'Dave Rolsky <autarch@urth.org>',
   'BUILD_REQUIRES' => {
-    'Test::Exception' => '0',
+    'Test::Fatal' => '0',
     'Test::More' => '0.88',
     'Test::Requires' => '0'
   },
@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'Params::Util' => '0',
     'Sub::Install' => '0'
   },
-  'VERSION' => '0.09',
+  'VERSION' => '0.10',
   'test' => {
     'TESTS' => 't/*.t'
   }

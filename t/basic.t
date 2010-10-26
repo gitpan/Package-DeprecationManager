@@ -1,20 +1,22 @@
 use strict;
 use warnings;
 
-use Test::Exception;
 use Test::More;
+use Test::Fatal;
 
 use Test::Requires {
     'Test::Output' => '0.16',
 };
 
 {
-    throws_ok {
-        eval 'package Foo; use Package::DeprecationManager;';
-        die $@ if $@;
-    }
-    qr/^\QYou must provide a hash reference -deprecations parameter when importing Package::DeprecationManager/,
-        'must provide a set of deprecations when using Package::DeprecationManager';
+    like(
+        exception {
+            eval 'package Foo; use Package::DeprecationManager;';
+            die $@ if $@;
+        },
+        qr/^\QYou must provide a hash reference -deprecations parameter when importing Package::DeprecationManager/,
+        'must provide a set of deprecations when using Package::DeprecationManager'
+    );
 }
 
 {
