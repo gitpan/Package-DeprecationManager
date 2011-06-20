@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
 BEGIN {
-  $Package::DeprecationManager::VERSION = '0.10';
+  $Package::DeprecationManager::VERSION = '0.11';
 }
 
 use strict;
@@ -8,7 +8,7 @@ use warnings;
 
 use Carp qw( croak );
 use List::MoreUtils qw( any );
-use Params::Util qw( _HASH );
+use Params::Util qw( _HASH0 );
 use Sub::Install;
 
 sub import {
@@ -17,7 +17,7 @@ sub import {
 
     croak
         'You must provide a hash reference -deprecations parameter when importing Package::DeprecationManager'
-        unless $args{-deprecations} && _HASH( $args{-deprecations} );
+        unless $args{-deprecations} && _HASH0( $args{-deprecations} );
 
     my %registry;
 
@@ -137,7 +137,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
@@ -263,11 +263,11 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Dave Rolsky.
+This software is Copyright (c) 2011 by Dave Rolsky.
 
 This is free software, licensed under:
 
-  The Artistic License 2.0
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 
