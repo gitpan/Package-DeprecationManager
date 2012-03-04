@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
-BEGIN {
-  $Package::DeprecationManager::VERSION = '0.11';
+{
+  $Package::DeprecationManager::VERSION = '0.12';
 }
 
 use strict;
@@ -137,7 +137,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =head1 SYNOPSIS
 
@@ -178,7 +178,7 @@ version 0.11
 
   My::Class->new()->foo(); # warns
   My::Class->new()->bar(); # does not warn
-  My::Class->new()->far(); # does not warn again
+  My::Class->new()->bar(); # does not warn again
 
 =head1 DESCRIPTION
 
@@ -224,8 +224,8 @@ C<caller()> to identify its caller, using its fully qualified subroutine name.
 
 A given deprecation warning is only issued once for a given package. This
 module tracks this based on both the feature name I<and> the error message
-itself. This means that if you provide severaldifferent error messages for the
-same feature, all of those errors will appear.
+itself. This means that if you provide several different error messages for
+the same feature, all of those errors will appear.
 
 =head1 BUGS
 
@@ -263,7 +263,7 @@ Dave Rolsky <autarch@urth.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Dave Rolsky.
+This software is Copyright (c) 2012 by Dave Rolsky.
 
 This is free software, licensed under:
 

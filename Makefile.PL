@@ -9,29 +9,32 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Manage deprecation warnings for your distribution',
-  'AUTHOR' => 'Dave Rolsky <autarch@urth.org>',
-  'BUILD_REQUIRES' => {
-    'Test::Fatal' => '0',
-    'Test::More' => '0.88',
-    'Test::Requires' => '0'
+  "ABSTRACT" => "Manage deprecation warnings for your distribution",
+  "AUTHOR" => "Dave Rolsky <autarch\@urth.org>",
+  "BUILD_REQUIRES" => {
+    "Test::Fatal" => 0,
+    "Test::More" => "0.88",
+    "Test::Requires" => 0,
+    "Test::Spelling" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Package-DeprecationManager',
-  'EXE_FILES' => [],
-  'LICENSE' => 'artistic_2',
-  'NAME' => 'Package::DeprecationManager',
-  'PREREQ_PM' => {
-    'Carp' => '0',
-    'List::MoreUtils' => '0',
-    'Params::Util' => '0',
-    'Sub::Install' => '0'
+  "DISTNAME" => "Package-DeprecationManager",
+  "EXE_FILES" => [],
+  "LICENSE" => "artistic_2",
+  "NAME" => "Package::DeprecationManager",
+  "PREREQ_PM" => {
+    "Carp" => 0,
+    "List::MoreUtils" => 0,
+    "Params::Util" => 0,
+    "Sub::Install" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.11',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.12",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
