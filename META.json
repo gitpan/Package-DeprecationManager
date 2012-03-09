@@ -33,8 +33,7 @@
          "requires" : {
             "Test::Fatal" : "0",
             "Test::More" : "0.88",
-            "Test::Requires" : "0",
-            "Test::Spelling" : "0"
+            "Test::Requires" : "0"
          }
       }
    },
@@ -50,6 +49,6 @@
          "web" : "http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/Package-DeprecationManager.git;a=summary"
       }
    },
-   "version" : "0.12"
+   "version" : "0.13"
 }
 

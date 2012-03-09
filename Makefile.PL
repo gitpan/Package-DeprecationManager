@@ -14,8 +14,7 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {
     "Test::Fatal" => 0,
     "Test::More" => "0.88",
-    "Test::Requires" => 0,
-    "Test::Spelling" => 0
+    "Test::Requires" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -32,7 +31,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.12",
+  "VERSION" => "0.13",
   "test" => {
     "TESTS" => "t/*.t"
   }

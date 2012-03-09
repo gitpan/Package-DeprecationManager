@@ -1,6 +1,6 @@
 package Package::DeprecationManager;
 {
-  $Package::DeprecationManager::VERSION = '0.12';
+  $Package::DeprecationManager::VERSION = '0.13';
 }
 
 use strict;
@@ -137,7 +137,7 @@ Package::DeprecationManager - Manage deprecation warnings for your distribution
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
